@@ -12,7 +12,7 @@ use \Popshack\Silex\Provider\Hal\HalServiceProvider;
 
 $app = new Application();
 
-$app->register(new Acme\HalServiceProvider());
+$app->register(new HalServiceProvider());
 ```
 You can now use this in your controllers to obtain a Hal instance:
 ```php
