@@ -18,7 +18,7 @@ You can now use this in your controllers to obtain a Hal instance:
 ```php
 $app->get('/hello', function () use ($app) {
     $hal = $app['hal']('/orders');
-    return $hal->toJson();
+    return $hal->asJson();
 });
 ```
 ## Installation
