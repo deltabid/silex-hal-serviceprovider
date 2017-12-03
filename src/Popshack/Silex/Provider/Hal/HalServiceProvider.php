@@ -14,9 +14,10 @@
  */
 namespace Popshack\Silex\Provider\Hal;
 
-use \Silex\Application;
-use \Silex\ServiceProviderInterface;
 use \Nocarrier\Hal;
+use Pimple\Container;
+use \Silex\Application;
+use Pimple\ServiceProviderInterface;
 
 /**
  * Simple HAL provider for Silex.
@@ -39,7 +40,7 @@ class HalServiceProvider implements ServiceProviderInterface
      * @param Application $app
      * @return \Nocarrier\Hal
      */
-    public function register(Application $app)
+    public function register(Container $app)
     {
         $app['hal'] = $app->protect(
            function ($link, array $data = array()) use ($app) {
